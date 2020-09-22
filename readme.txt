@@ -2,7 +2,7 @@
 # The app is reading the CSV, doing some calculations (feature engineering) and then showing a table with filters to the user
 # Technology used: python, streamlit, docker and for the hosting heroku (can be changed or done locally)
 
-# Alternative A: run it locally with docker
+# === Alternative A ===: run it locally with docker
 # docker desktop needs to be installed and running
 cd .\ch_o_finder
 
@@ -15,8 +15,19 @@ docker run -p 8501:8501 or_finder:latest
 # access in webbrowser:
 localhost:8501
 
-# ===================================================
-# Alternative B: run it in the cloud (heroku, 5 apps are for free)
+# === Alternative B === : run it in the cloud (heroku, 5 apps are for free)
 # install heroku CLI (command line interface)
 # https://devcenter.heroku.com/articles/container-registry-and-runtime
 
+heroku login
+heroku container:login
+# create heroku app:
+heroku create [your_app_name]
+# build image and push to container registry
+heroku container:push web --app [your_app_name]
+heroku container:relaese web --app [your_app_name]
+
+# Ressources for heroku:
+# https://devcenter.heroku.com/articles/container-registry-and-runtime
+# https://medium.com/travis-on-docker/how-to-run-dockerized-apps-on-heroku-and-its-pretty-great-76e07e610e22
+# (second link: without downloading the heroku-container-registry (already installed))
