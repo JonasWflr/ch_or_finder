@@ -2,6 +2,8 @@
 # The app is reading the CSV, doing some calculations (create new features) and then showing the user a simple BI tool (i.e. a table with some filters)
 # Technology used: python, streamlit, docker and for Alternative B hosting by heroku
 
+# In short: The streamlit package is very simple to use, check the code for the 'st.' lines and look at the dockerfile
+
 # === Alternative A ===: run it locally with docker
 # docker desktop needs to be installed and running
 
