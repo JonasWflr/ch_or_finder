@@ -135,6 +135,10 @@ elif day_race == 'only night races':
 else:
     df = df 
 
+st.sidebar.subheader('How to')
+st.sidebar.markdown('Apply the filters from top to bottom and find your races ...')
+st.sidebar.markdown('data is from https://www.o-l.ch/cgi-bin/fixtures')
+
 ##############################################################
 ## reduce columns and print
 displayed_columns = ['week', 'date', 'event_name', 'region', 'location', 'day_night', 'national', 'map', 'club', 'event_link', 'deadline']
@@ -157,5 +161,5 @@ df = df.to_html(escape=False)
 # output as simple table (see also very first command at top for styling options
 st.write(df, unsafe_allow_html=True)
 
-st.write('data is from https://www.o-l.ch/cgi-bin/fixtures')
+
 

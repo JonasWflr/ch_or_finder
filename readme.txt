@@ -9,7 +9,7 @@
 
 cd .\ch_o_finder
 # Build:
-docker build -f Dockerfile -t or_finder:latest .
+docker build -f Dockerfile_Docker_Desktop -t or_finder:latest .
 # Run:
 docker run -p 8501:8501 or_finder:latest
 # access in webbrowser:
